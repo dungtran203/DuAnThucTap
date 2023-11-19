@@ -1,0 +1,23 @@
+package com.DuAnThucTap.model.mapper;
+
+import com.DuAnThucTap.entity.ChiTietVoucherThuHang;
+import com.DuAnThucTap.model.request.create_request.CreateChiTietVoucherThuHangRequest;
+import com.DuAnThucTap.model.request.update_request.UpdateChiTietVoucherThuHangRequest;
+import com.DuAnThucTap.model.response.ChiTietVoucherThuHangResponse;
+import org.mapstruct.Mapper;
+
+import java.util.List;
+
+@Mapper(componentModel = "spring")
+public interface ChiTietVoucherThuHangMapper {
+
+    ChiTietVoucherThuHang chiTietVoucherThuHangResponseToChiTietVoucherThuHangEntity(ChiTietVoucherThuHangResponse chiTietVoucherThuHangResponse);
+
+    ChiTietVoucherThuHangResponse chiTietVoucherThuHangEntityToChiTietVoucherThuHangResponse(ChiTietVoucherThuHang chiTietVoucherThuHang);
+
+    ChiTietVoucherThuHang createChiTietVoucherThuHangRequestToChiTietVouCherThuHangEntity(CreateChiTietVoucherThuHangRequest createChiTietVoucherThuHangRequest);
+
+    ChiTietVoucherThuHang updateChiTietVoucherThuHangRequestToChiTietVouCherThuHangEntity(UpdateChiTietVoucherThuHangRequest updateChiTietVoucherThuHangRequest);
+
+    List<ChiTietVoucherThuHangResponse> listChiTietVoucherThuHangEntityToChiTietVoucherThuHangResponse(List<ChiTietVoucherThuHang> chiTietVoucherThuHangList);
+}
